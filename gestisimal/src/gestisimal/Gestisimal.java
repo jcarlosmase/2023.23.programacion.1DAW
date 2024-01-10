@@ -15,9 +15,8 @@ public class Gestisimal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        articulo [] cosa = new articulo[3];
-        
-        System.out.println(cosa[0]);
+        articulo a1 = new articulo("0001","pepinillos", 2.3f, 2.5f, 5);
+        System.out.println(a1);
         
     }
     

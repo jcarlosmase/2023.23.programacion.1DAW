@@ -6,7 +6,7 @@ package gestisimal;
 
 /**
  *
- * @author Juan C. Jiménez
+ * @author Juan C. Jiménez Masegosa
  */
 public class articulo {
     private String codigo;
@@ -17,7 +17,11 @@ public class articulo {
     
     //constructores
     public articulo(String c, String d, float pc, float pv, int s){
-        
+        this.codigo = c;
+        this.descripcion = d;
+        this.precioCompra = pc;
+        this.precioVenta = pv;
+        this.stock = s;
     }
 
     public String getCodigo() {
@@ -63,9 +67,9 @@ public class articulo {
     public String toString(){
         String art = "";
         art = this.codigo + "\t" +
-              this.descripcion + "\t" +
-              this.precioCompra + "\t" +
-              this.precioVenta + "\t" +
+              this.descripcion + "\t\t" +
+              this.precioCompra + "€\t" +
+              this.precioVenta + "€\t" +
               this.stock;
         return art;
     }
