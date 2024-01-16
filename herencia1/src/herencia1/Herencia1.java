@@ -19,6 +19,10 @@ public class Herencia1 {
         persona p1 = new persona("11111111A","Pepillo","El de los palotes",80.2f,15);
         
         System.out.println(p1);
+        
+        policia poli1 = new policia("22222222B","Lola","Flores",70.3f,45,"Cabo",12345);
+        
+        System.out.println(poli1);
     }
     
 }
