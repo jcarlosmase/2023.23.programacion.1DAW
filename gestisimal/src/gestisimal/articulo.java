@@ -67,7 +67,7 @@ public class articulo {
     public String toString(){
         String art = "";
         art = this.codigo + "\t" +
-              this.descripcion + "\t\t" +
+              this.descripcion + "\t" +
               this.precioCompra + "€\t" +
               this.precioVenta + "€\t" +
               this.stock;
