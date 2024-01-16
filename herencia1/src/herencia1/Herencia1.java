@@ -15,6 +15,10 @@ public class Herencia1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        persona p1 = new persona("11111111A","Pepillo","El de los palotes",80.2f,15);
+        
+        System.out.println(p1);
     }
     
 }
