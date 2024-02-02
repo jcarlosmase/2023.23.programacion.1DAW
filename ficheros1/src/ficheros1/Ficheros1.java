@@ -20,18 +20,21 @@ public class Ficheros1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("cosa.txt"));
-            String linea = "";
-            while (linea != null) {
-                System.out.println(linea);
-                linea = br.readLine();
-            }
-            br.close();
-        } catch (FileNotFoundException fnfe) { // qué hacer si no se encuentra el fichero
-            System.out.println("No se encuentra el fichero cosa.txt");
-        } catch (IOException ioe) { // qué hacer si hay un error en la lectura del fichero
-            System.out.println("No se puede leer el fichero cosa.txt");
+        String cadena = "Hola Clase, ¿cómo estais? espero que bien";
+        String [] cadena2;
+        
+        /*for (int i = 0; i < cadena.length(); i++) {
+            System.out.print(cadena.charAt(i));
+        }*/
+        
+        cadena2 = cadena.split(" ");
+        for (int i = 0; i < cadena2.length; i++) {
+            System.out.println(cadena2[i]);
         }
+        /*System.out.println(cadena.substring(0,5).toUpperCase() + cadena.substring(5).toLowerCase());
+        cadena2 = cadena.replace('a', '@');
+        System.out.println(cadena.replace("Clase", "Mundo mundial"));
+        System.out.println(cadena2);*/
+        //System.out.println(cadena);
     }
 }
