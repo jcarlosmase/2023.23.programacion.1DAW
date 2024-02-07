@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import excepciones.servicioFull;
+import excepciones.telefonoDuplicado;
 
 /**
  *
@@ -46,6 +48,34 @@ public class compañia {
         }catch(IOException ioE){
             throw ioE;
         }
+    }
+    
+    public void addCustomer(movil m) throws telefonoDuplicado, servicioFull{
+        /*COMPROBACIONES*/
+        /* PreCondiciones
+           1. El teléfono no debe ser un cliente suyo -> Excepcion: telefonoDuplicado
+           2. Que tenga hueco libre. (Que el array no este lleno) -> Excepcion: servicioFull
+        */
+        int posLibre = -1;
+        for (int i = 0; i < this.numClientes; i++) {
+            if(this.clientes[i]!=null){ //En la posicion i hay un cliente
+                if(this.clientes[i].getNumero().equals(m.getNumero())){
+                    throw new telefonoDuplicado();
+                }
+            }else{ //Hay un hueco
+                posLibre=i;
+            }
+        }
+        if(posLibre != -1){//Hay un hueco libre para guardar el cliente
+            this.clientes[posLibre] = m;
+        }else{//Esta lleno
+            throw new servicioFull();
+        }
+    }
+    
+    public void guardar(String fichero) throws IOException{
+        //Guarda los datos de la compañia en el 'fichero' con el formato apropiado
+        //telefono;tiempo;euros -> por cada linea
     }
     
     public String toString(){

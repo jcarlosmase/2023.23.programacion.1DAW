@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
+import excepciones.servicioFull;
+import excepciones.telefonoDuplicado;
 
 /**
  *
@@ -22,11 +24,18 @@ public class Telefonos {
         // TODO code application logic here
         try{
             compañia vodafone = new compañia("clientes1.txt");
+            movil m1 = new movil("654456654","RATA");
+            vodafone.addCustomer(m1);
+            vodafone.guardar("clientes1.txt");
             System.out.println(vodafone);
         }catch(FileNotFoundException fnf){
             System.out.println("El archivo de clientes no existe");
         }catch(IOException ioE){
             System.out.println("No se puede acceder al archivo de clientes. Compruebe el acceso al fichero");
+        }catch(telefonoDuplicado ioE){
+            System.out.println("El telefono que se intenta dar de alta ya es cliente de la compañía");
+        }catch(servicioFull ioE){
+            System.out.println("La compañía ya no puede dar soporte a mas clientes");
         }
         
     }
