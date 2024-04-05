@@ -10,6 +10,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import excepciones.servicioFull;
 import excepciones.telefonoDuplicado;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 /**
  *
@@ -76,6 +78,20 @@ public class compañia {
     public void guardar(String fichero) throws IOException{
         //Guarda los datos de la compañia en el 'fichero' con el formato apropiado
         //telefono;tiempo;euros -> por cada linea
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fichero));
+            for (int i = 0; i < this.numClientes; i++) {
+                if(this.clientes[i]!=null){
+                    bw.write(this.clientes[i].getNumero()+";"+
+                             this.clientes[i].getTarifa()+";"+
+                             this.clientes[i].getDuracion()+";"+
+                             this.clientes[i].getDinero()+"\n");
+                }
+            }
+            bw.close();
+        }catch(IOException IOe){
+            throw IOe; 
+        }
     }
     
     public String toString(){

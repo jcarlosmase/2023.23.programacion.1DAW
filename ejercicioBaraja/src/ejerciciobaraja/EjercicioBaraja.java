@@ -4,6 +4,8 @@
  */
 package ejerciciobaraja;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Juan C. Jiménez
@@ -15,28 +17,27 @@ public class EjercicioBaraja {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /*carta c1=new carta(1,'O');
-        carta c2=new carta(10,'E');
-        System.out.println(c1);
-        System.out.println(c2);*/
+        HashMap<Integer, Integer> valores = new HashMap<Integer, Integer>();
+        baraja b = new baraja();
+        carta [] robadas = new carta[5]; 
         
-        baraja b1 = new baraja();
-        carta [] tres = new carta[3];
-       
-        /*b1.barajar();
-        b1.cortar(20);
-        System.out.println("ANTES");
-        System.out.println(b1);
-        System.out.println("ROBA");
-        System.out.println(b1.robar());
-        System.out.println("DESPUES");
-        System.out.println(b1);*/
-        b1.eligeCartas(tres);
-        System.out.println(tres[0]);
-        System.out.println(tres[1]);
-        System.out.println(tres[2]);
-        System.out.println("BARAJA");
-        System.out.println(b1);
+        valores.put(1, 11); //As
+        valores.put(3, 10); //Tres
+        valores.put(10, 2); //Sota
+        valores.put(11, 3); //Caballo
+        valores.put(12, 4); //Rey
+        
+        b.barajar();
+        b.cortar(Numeros.Aleatorio(0, 47));
+        for (int i = 0; i < 5; i++) {
+            robadas[i] = b.robar();
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println(robadas[i]);
+        }
+        
+        System.out.println("Tienes ?? puntos");
     }
     
 }

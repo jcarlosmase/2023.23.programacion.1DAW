@@ -28,6 +28,10 @@ public class movil extends terminal {
         this.dinero = dinero;
     }
     
+    public String getTarifa(){
+        return this.tarifa;
+    }
+    
     public void llama(movil m, int d){
         super.llama(m,d);
         switch(this.tarifa){
