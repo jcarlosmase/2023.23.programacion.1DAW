@@ -60,6 +60,13 @@ public class libro {
     public void prestar(prestamo p){
         this.prestamos.add(p);
     }
+    
+    public boolean estaPrestado(){
+        for(prestamo p : this.prestamos)
+            if(p.getFechaDev()==0)
+                return true;
+        return false;
+    }
 
     @Override
     public String toString() {

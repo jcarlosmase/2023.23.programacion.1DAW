@@ -22,7 +22,7 @@ public class BibliotecaHashMap {
         b1.ADD(new libro("11111","El Quijote","Miguel de Cervantes",100), "QUI-24-03");
         b1.ADD(new libro("22222","Programación en Java","Juan C. Jiménez",200), "JAVA-24-01");
         
-        b1.prestar("QUI-24-02", new prestamo(20240430,"Pepillo Palotes"));
+        b1.prestar("QUI-24-01", new prestamo(20240430,"Pepillo Palotes"));
         
         if(b1.estaPrestado("QUI-24-01"))
             System.out.println("Esta prestado");

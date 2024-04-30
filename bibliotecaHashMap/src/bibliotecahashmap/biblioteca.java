@@ -5,6 +5,7 @@
 package bibliotecahashmap;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -26,10 +27,17 @@ public class biblioteca {
     }
     
     public boolean estaPrestado(String signatura){
-        return true;
+        return this.ejemplares.get(signatura).estaPrestado();
     }
     
     public int numEjemplares(String ISBN){
-        return 0;
+        int num = 0;
+        
+        for(Map.Entry ejemplar : this.ejemplares.entrySet()){
+            libro l = (libro) ejemplar.getValue();
+            if(l.getISBN().equals(ISBN))
+                num++;
+        }
+        return num;
     }
 }
