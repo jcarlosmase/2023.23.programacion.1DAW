@@ -1,0 +1,7 @@
+[test]
+¿De qué color es el caballo blanco de Santiago?
+blanco
+marrón
+azul
+Santiago no tiene caballo
+0

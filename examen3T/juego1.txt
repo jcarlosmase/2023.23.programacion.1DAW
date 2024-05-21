@@ -1,0 +1,34 @@
+[test]
+¿Cuanto es 2 + 2?
+1
+dos
+4
+No se puede calcular
+2
+[vf]
+La programación en JAVA es fácil
+V
+[pistas]
+Es un animal
+Tiene pelo
+Es mamífero
+Es doméstico
+Se considera el mejor amigo del hombre
+perro
+[vf]
+El profesor de programación del IES Valle-Inclán es muy atractivo
+F
+[pistas]
+Es un alimento
+Es dulce
+Color amarillo
+Es una fruta
+Oro parece plata no es
+platano
+[test]
+El polimorfismo es...
+El rabillo que todas las boinas poseen en la parte superior de la misma. Por ejemplo, a los vascos les gustan las boinas con el polimorfismo bien largo.
+La capacidad que tiene un objeto de comportarse de distintas formas. Por ejemplo, el objeto se ha instanciado llamando al constructor de una clase derivada gracias al polimorfismo.
+El saliente de la pata de la cama con el que nos golpeamos por la noche cuando nos levantamos para ir al servicio. Por ejemplo, esta noche me he levantado a orinar y me he dado un golpe con el polimorfismo en el dedo chico del pie.
+Un tic que hace que estés guiñando el ojo derecho constantemente a la vez que chocas el hombro izquierdo con la mejilla. Por ejemplo, tu polimorfismo me está poniendo nervioso.
+1
