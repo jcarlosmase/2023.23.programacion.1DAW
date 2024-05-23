@@ -28,109 +28,124 @@ public class formulario1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        etiqueta1 = new javax.swing.JLabel();
-        boton1 = new javax.swing.JButton();
-        boton2 = new javax.swing.JButton();
-        boton3 = new javax.swing.JButton();
-        boton4 = new javax.swing.JButton();
+        panel1 = new javax.swing.JDesktopPane();
+        barraMenu = new javax.swing.JMenuBar();
+        mPrincipal = new javax.swing.JMenu();
+        opcSalir = new javax.swing.JMenuItem();
+        mClientes = new javax.swing.JMenu();
+        opcNewCli = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        mModificarCli = new javax.swing.JMenu();
+        opcCambiarCli = new javax.swing.JMenuItem();
+        opcBorrarCli = new javax.swing.JMenuItem();
+        mProveedores = new javax.swing.JMenu();
+        mFacturacion = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Holaaaaaa");
 
-        etiqueta1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        etiqueta1.setText("Vacío");
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 959, Short.MAX_VALUE)
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 478, Short.MAX_VALUE)
+        );
 
-        boton1.setText("Saluda");
-        boton1.addActionListener(new java.awt.event.ActionListener() {
+        mPrincipal.setText("Principal");
+
+        opcSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        opcSalir.setText("Salir");
+        opcSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton1ActionPerformed(evt);
+                opcSalirActionPerformed(evt);
+            }
+        });
+        mPrincipal.add(opcSalir);
+
+        barraMenu.add(mPrincipal);
+
+        mClientes.setText("Clientes");
+        mClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mClientesActionPerformed(evt);
             }
         });
 
-        boton2.setText("Saluda 2");
-        boton2.addActionListener(new java.awt.event.ActionListener() {
+        opcNewCli.setText("Añadir cliente");
+        opcNewCli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton2ActionPerformed(evt);
+                opcNewCliActionPerformed(evt);
             }
         });
+        mClientes.add(opcNewCli);
+        mClientes.add(jSeparator1);
 
-        boton3.setText("Salir");
-        boton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton3ActionPerformed(evt);
-            }
-        });
+        mModificarCli.setText("Modificar cliente");
 
-        boton4.setText("Abrir ventana");
-        boton4.addActionListener(new java.awt.event.ActionListener() {
+        opcCambiarCli.setText("Cambiar datos");
+        opcCambiarCli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton4ActionPerformed(evt);
+                opcCambiarCliActionPerformed(evt);
             }
         });
+        mModificarCli.add(opcCambiarCli);
+
+        opcBorrarCli.setText("Borrar clieente");
+        mModificarCli.add(opcBorrarCli);
+
+        mClientes.add(mModificarCli);
+
+        barraMenu.add(mClientes);
+
+        mProveedores.setText("Proveedores");
+        barraMenu.add(mProveedores);
+
+        mFacturacion.setText("Facturación");
+        barraMenu.add(mFacturacion);
+
+        setJMenuBar(barraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(boton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(boton2)
-                .addGap(209, 209, 209))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(etiqueta1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(211, 211, 211)
-                        .addComponent(boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)
-                        .addComponent(boton4)))
-                .addContainerGap(160, Short.MAX_VALUE))
+            .addComponent(panel1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(etiqueta1)
-                .addGap(103, 103, 103)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton1)
-                    .addComponent(boton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton3)
-                    .addComponent(boton4))
-                .addGap(110, 110, 110))
+            .addComponent(panel1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+    private void opcSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcSalirActionPerformed
         // TODO add your handling code here:
-        etiqueta1.setText("Hola Mundo!!!");
-    }//GEN-LAST:event_boton1ActionPerformed
-
-    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"Hola Mundo");
-    }//GEN-LAST:event_boton2ActionPerformed
-
-    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-        // TODO add your handling code here:
-        if(JOptionPane.showConfirmDialog(this, "¿Seguro que quieres salir?") == JOptionPane.YES_OPTION){
+        if(JOptionPane.showConfirmDialog(this, "¿Estás seguro que quieres salir?")==JOptionPane.YES_OPTION)
             System.exit(0);
-        }
-    }//GEN-LAST:event_boton3ActionPerformed
+    }//GEN-LAST:event_opcSalirActionPerformed
 
-    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+    private void opcNewCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcNewCliActionPerformed
+        // TODO add your handling code here:
+
+        prueba ventana = new prueba();
+        panel1.add(ventana);
+        ventana.setVisible(true);
+    }//GEN-LAST:event_opcNewCliActionPerformed
+
+    private void mClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mClientesActionPerformed
+
+    private void opcCambiarCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcCambiarCliActionPerformed
         // TODO add your handling code here:
         formulario2 ventana = new formulario2();
         ventana.setVisible(true);
-    }//GEN-LAST:event_boton4ActionPerformed
+    }//GEN-LAST:event_opcCambiarCliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,10 +183,17 @@ public class formulario1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton boton1;
-    private javax.swing.JButton boton2;
-    private javax.swing.JButton boton3;
-    private javax.swing.JButton boton4;
-    private javax.swing.JLabel etiqueta1;
+    private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenu mClientes;
+    private javax.swing.JMenu mFacturacion;
+    private javax.swing.JMenu mModificarCli;
+    private javax.swing.JMenu mPrincipal;
+    private javax.swing.JMenu mProveedores;
+    private javax.swing.JMenuItem opcBorrarCli;
+    private javax.swing.JMenuItem opcCambiarCli;
+    private javax.swing.JMenuItem opcNewCli;
+    private javax.swing.JMenuItem opcSalir;
+    private javax.swing.JDesktopPane panel1;
     // End of variables declaration//GEN-END:variables
 }

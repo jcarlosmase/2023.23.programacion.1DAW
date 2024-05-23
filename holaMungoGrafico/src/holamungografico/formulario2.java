@@ -17,6 +17,7 @@ public class formulario2 extends javax.swing.JFrame {
      */
     public formulario2() {
         initComponents();
+        rellenaCombo();
     }
 
     /**
@@ -38,6 +39,9 @@ public class formulario2 extends javax.swing.JFrame {
         boton2 = new javax.swing.JButton();
         sexo1 = new javax.swing.JRadioButton();
         sexo2 = new javax.swing.JRadioButton();
+        boton3 = new javax.swing.JButton();
+        combo1 = new javax.swing.JComboBox<>();
+        label2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -69,24 +73,42 @@ public class formulario2 extends javax.swing.JFrame {
         grupoSexo.add(sexo2);
         sexo2.setText("Masculino");
 
+        boton3.setText("Comprobar sexo");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
+
+        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cine", "Pasear", "Estar con los amigos", "Programar", "Teatro" }));
+
+        label2.setText("Selecciona tu afición favorita");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(label1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(boton1)
-                    .addComponent(jScrollPane1)
-                    .addComponent(texto1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(label1)
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1)
+                                .addComponent(texto1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(combo1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(label2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sexo2)
                     .addComponent(casilla1)
                     .addComponent(boton2)
-                    .addComponent(sexo1))
+                    .addComponent(sexo1)
+                    .addComponent(boton3)
+                    .addComponent(sexo2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,20 +119,30 @@ public class formulario2 extends javax.swing.JFrame {
                     .addComponent(label1)
                     .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(casilla1))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(boton2)
+                                .addGap(27, 27, 27)
+                                .addComponent(sexo1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(sexo2)
+                        .addGap(19, 19, 19))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(boton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(sexo1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sexo2)
-                .addGap(19, 19, 19)
+                        .addGap(82, 82, 82)
+                        .addComponent(label2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)))
+                .addComponent(boton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(boton1)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -131,6 +163,20 @@ public class formulario2 extends javax.swing.JFrame {
             
     }//GEN-LAST:event_boton2ActionPerformed
 
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        // TODO add your handling code here:
+        if(sexo1.isSelected()){
+            JOptionPane.showMessageDialog(this, "Has seleccionado femenino");
+        }else if(sexo2.isSelected()){
+            JOptionPane.showMessageDialog(this, "Has seleccionado masculino");
+        }
+    }//GEN-LAST:event_boton3ActionPerformed
+
+    private void rellenaCombo(){
+        combo1.addItem("Ver la tele");
+        combo1.addItem("Videojuegos");
+        combo1.addItem("Rascarme la barriga");
+    }
     /**
      * @param args the command line arguments
      */
@@ -146,11 +192,14 @@ public class formulario2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton1;
     private javax.swing.JButton boton2;
+    private javax.swing.JButton boton3;
     private javax.swing.JCheckBox casilla1;
+    private javax.swing.JComboBox<String> combo1;
     private javax.swing.ButtonGroup grupoSexo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel label1;
+    private javax.swing.JLabel label2;
     private javax.swing.JRadioButton sexo1;
     private javax.swing.JRadioButton sexo2;
     private javax.swing.JTextField texto1;
