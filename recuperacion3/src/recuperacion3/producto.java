@@ -12,13 +12,23 @@ public class producto {
     private int codigo; //auto_increment
     private String nombre;
     private float precio;
+    private int stock;
     private static int numProducto=0;
 
-    public producto(String nombre, float precio) {
+    public producto(String nombre, float precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
+        this.stock = stock;
         this.numProducto++;
         this.codigo = this.numProducto;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     public int getCodigo() {
@@ -43,7 +53,7 @@ public class producto {
 
     @Override
     public String toString() {
-        return "producto{" + "codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + '}';
+        return "producto{" + "codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + ", stock=" + stock + '}';
     }
     
     public static void metodoX(){
