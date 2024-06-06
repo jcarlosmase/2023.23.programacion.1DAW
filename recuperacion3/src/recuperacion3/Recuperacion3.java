@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package agendax;
+package recuperacion3;
 
 /**
  *
  * @author Juan C. Jiménez
  */
-public class AgendaX {
+public class Recuperacion3 {
 
     /**
      * @param args the command line arguments

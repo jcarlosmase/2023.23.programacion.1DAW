@@ -137,6 +137,8 @@ public class nuevaCita extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23))
         );
 
+        getAccessibleContext().setAccessibleName("Crea nueva cita");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
